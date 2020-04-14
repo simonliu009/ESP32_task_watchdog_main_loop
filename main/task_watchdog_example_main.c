@@ -28,6 +28,11 @@
 
 static TaskHandle_t reset_wdt_task_handles;
 
+void esp_task_wdt_isr_user_handler()
+{   
+    //Using this will cause reset when TWDT is triggered. Comment out this line to see the TWDT tigger message.
+    // printf("******** user-defined  task_wdt_isr *********"); 
+}
 
 
 void app_main()
